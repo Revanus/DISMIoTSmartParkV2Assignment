@@ -436,11 +436,11 @@ p) The “Parking” table will be updated when a car enters through the entry g
 
 a) Navigate to Things under Manage section in AWS IoT Core.
 
-![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image051.png "Optional title")
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image052.png "Optional title")
 
 b) Select the thing you created previously and go to the interact section.
 
-![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image052.png "Optional title")
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image053.png "Optional title")
 
 c) Take note of the string under HTTPS. You will need it later for some of the python codes.
 
