@@ -43,12 +43,16 @@ will be scaled down to 15 seconds for demonstration purposes.
 
 ```
 Final Set-up
-![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image001.png "Optional title")
 ```
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image001.png "Optional title")
+
 ```
 Overview of SmartPark internally
-![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image002.png "Optional title")
 ```
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image002.png "Optional title")
+
 
 ### C. How the web application looks like
 ![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image003.png "Optional title")
