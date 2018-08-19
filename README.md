@@ -501,14 +501,14 @@ device_tree_param=spi=on
 dtoverlay=spi-bcm2835
 ```
 
-(^) **<< Install Python-dev>>**
+**<< Install Python-dev>>**
 c) Install the Python development libraries
 
 ```
 sudo apt-get install python-dev
 ```
 
-(^) **<< Install SPI-Py Library >>**
+**<< Install SPI-Py Library >>**
 
 d) Set up the SPI Python libraries since the card reader uses the SPI interface
 ```
@@ -517,7 +517,7 @@ cd /home/pi/SPI-Py
 sudo python setup.py install
 ```
 
-(^) **<< Install RFID library >>**
+**<< Install RFID library >>**
 
 e) Clone the MFRC522-python library and copy out the required files to your project directory
 ```
