@@ -455,7 +455,7 @@ how to create, connect to and host the web application on the EC2 instance.
 
 a) First, navigate to EC2 within the AWS website by clicking on services, then EC2.
 
-![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image053.png "Optional title")
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image021.png "Optional title")
 
 b) Under the Create Instance section, click launch instance.
 
