@@ -43,13 +43,17 @@ will be scaled down to 15 seconds for demonstration purposes.
 
 ```
 Final Set-up
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image001.png "Optional title")
 ```
 ```
 Overview of SmartPark internally
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image002.png "Optional title")
 ```
 
 ### C. How the web application looks like
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image003.png "Optional title")
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image004.png "Optional title")
 
 ## Section 2 Hardware requirements
 
@@ -68,6 +72,8 @@ done by placing the resistor below the vehicle. Based on testing,
 the raw values from the MCP3008 ADC will be >0.62 if an object is
 above it.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image005.jpg "Optional title")
+
 ##### 3 Analog-to-Digital Converter
 
 a) The Raspberry Pi has no built-in analogue inputs
@@ -75,6 +81,8 @@ which make it difficult to work with our Light-
 Dependent Resistor. Hence, this converter will be
 used to convert the analogue inputs to digital signals
 for the RPi.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image006.jpg "Optional title")
 
 ##### 6 LED (3 Red, 3 Green)
 
@@ -84,12 +92,16 @@ negative side of the circuit (ground). In this case, 2 of the LEDs will be
 used for each parking lot to tell if the lot is occupied (1 Green LED, 1 Red
 LED).
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image007.png "Optional title")
+
 ##### 2 LCD Screen
 
 a) For this application, we will use the LCD Screen for both
 the entry gate and exit gate to show information like
 available lots, recommended parking lot & price of
 parking.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image008.jpg "Optional title")
 
 ##### 3 Half-Size Breadboard
 
@@ -99,17 +111,22 @@ simulate a parking lot. Do note that this is
 not necessary but it would be better as the
 initial breadboard will not be too cluttered.
 
-##### 9 Resistors (6 x 330 Ω Resistors, 3 x 10K Ω Resistor)
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image009.jpg "Optional title")
 
+##### 9 Resistors (6 x 330 Ω Resistors, 3 x 10K Ω Resistor)
 
 a) Resistors help ensure that small current will flow and
 the Raspberry Pi will not be damaged.
 As this application requires 2 LEDs for each lot, we will
 also use 2 resistors that are 330 Ohms each.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image010.png "Optional title")
+
 b) As this application requires a Light Dependent
 Resistor, we will use a 10K ohms Resistor to help
 moderate the flow of current.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image011.jpg "Optional title")
 
 ##### 5 RFID / NFC MFRC522 Card Reader Module
 
@@ -119,12 +136,16 @@ will be used to check if the car is there and for
 payment. Any amount of RFID card can be used for
 this application to work.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image012.jpg "Optional title")
+
 ## Section 3 Hardware setup
 
 In this section, we will connect all the necessary components described in Section 2.
 
 ### Fritzing Diagram
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image013.png "Optional title")
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image014.png "Optional title")
 
 ## Section 4 Create a “Thing”
 
@@ -132,38 +153,67 @@ In this section, we will connect all the necessary components described in Secti
 
 a) First, navigate to IoT Core within the AWS website by clicking on services, then IoT Core.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image021.png "Optional title")
+
 b) Under manage, select things and choose register a thing.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image022.png "Optional title")
 
 c) Choose Create a single thing.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image023.png "Optional title")
+
 d) Enter a name for your thing, for example, SmartPark. Leave the rest of the fields by their
 default values. Click next.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image024.png "Optional title")
 
 e) Click create certificate. After a few seconds, the following page will appear. Download all
 four files. As for the root CA, download the VeriSign Class 3 Public Primary G5 root CA
 certificate file.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image025.png "Optional title")
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image026.png "Optional title")
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image027.png "Optional title")
 
 f) Once done, rename the four files accordingly.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image028.png "Optional title")
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image029.png "Optional title")
 
 g) Move these four files into a directory in the raspberry pi.
 
 h) Click activate.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image030.png "Optional title")
+
 i) Click register thing. You will create a policy later.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image031.png "Optional title")
 
 j) Navigate to policies under the secure section. Click create a policy.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image032.png "Optional title")
 
 k) Enter a name for your policy, for example, SmartParkPolicy and enter the following under
 Add statements
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image033.png "Optional title")
+
 l) Navigate to certificates under secure section. Select the certificate you created previously,
 and click attach policy. Attach the policy you created previously.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image034.png "Optional title")
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image035.png "Optional title")
 
 m) Select the certificate you created previously again, and click attach thing. Attach the policy
 you previously created. Attach the thing you created previously.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image036.png "Optional title")
 
 #### Create AWS Role
 
@@ -233,6 +283,8 @@ sudo pip install awscli
 ```
 j) Take note of your AWS educate’s Access Key ID and Secret Access Key ID.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image037.png "Optional title")
+
 k) Type the following command in your Raspberry Pi terminal so that you can use the AWS CLI to configure your credentials file:
 ```
 aws configure
@@ -263,46 +315,67 @@ name iot-policy --policy-document file://iot-policy.json
 a) First, navigate to DynamoDB within the AWS website by clicking on services, then
 DynamoDB. Click create table.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image038.png "Optional title")
+
 b) Enter the table name “Carparks” and the primary key “Carpark_Name”, then click create.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image039.png "Optional title")
 
 c) Click create table again, enter the table name “Parking” and the primary key “RFID” and
 “Timestamp”, then click create.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image040.png "Optional title")
+
 d) Click create table again, enter the table name “Parking_Lots” and the primary key “ID” and
 “Carpark_Name”, then click create.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image041.png "Optional title")
 
 e) Next, navigate back to IoT Core within the AWS website by clicking on services, then IoT
 Core. Click Act, then create button at the top right corner.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image042.png "Optional title")
+
 f) Create the first rule with the name “Carparks”. Under attribute, enter “*”, topic filter
 enter “sensors/carparkdb”.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image043.png "Optional title")
 
 g) Under Set one or more actions section, click add action, select “split message into multiple
 columns of a database table”. Select configure action. Under table name, select the
 “Carparks” table. Under IAM role name, select the role you created previously, “my-iot-
 role”. Click add action, then create rule.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image044.png "Optional title")
+
 h) Create the second rule with the name “Parking”. Under attribute, enter “*”, topic filter
 enter “sensors/parkingdb”.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image045.png "Optional title")
 
 i) Under Set one or more actions section, click add action, select “split message into multiple
 columns of a database table”. Select configure action. Under table name, select the
 “Parking” table. Under IAM role name, select the role you created previously, “my-iot-
 role”. Click add action, then create rule.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image046.png "Optional title")
+
 j) Create the second rule with the name “Parking_Lot”. Under attribute, enter “*”, topic
 filter enter “sensors/parkinglotdb”.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image047.png "Optional title")
 
 k) Under Set one or more actions section, click add action, select “split message into multiple
 columns of a database table”. Select configure action. Under table name, select the
 “Parking_Lots” table. Under IAM role name, select the role you created previously, “my-
 iot-role”. Click add action, then create rule.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image048.png "Optional title")
+
 l) Now that we had created the rules, we can add items to the carparks and parking_lots
 table. Navigate to the test section of IoT Core in AWS.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image049.png "Optional title")
 
 m) Scroll down to Publish. Enter the topic “sensors/carparkdb”. Enter the following in the text
 field below:
@@ -313,6 +386,8 @@ field below:
 }
 ```
 n) The items are now in the Carparks table.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image050.png "Optional title")
 
 o) Next, Enter the topic “sensors/parkinglotdb”. Enter the following in the text field below:
 ```
@@ -344,6 +419,8 @@ Enter the last lot and press publish again.
 }
 ```
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image051.png "Optional title")
+
 p) The “Parking” table will be updated when a car enters through the entry gate.
 
 #### REST API endpoint of your “Thing”
@@ -351,7 +428,11 @@ p) The “Parking” table will be updated when a car enters through the entry g
 
 a) Navigate to Things under Manage section in AWS IoT Core.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image051.png "Optional title")
+
 b) Select the thing you created previously and go to the interact section.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image052.png "Optional title")
 
 c) Take note of the string under HTTPS. You will need it later for some of the python codes.
 
@@ -366,22 +447,35 @@ how to create, connect to and host the web application on the EC2 instance.
 
 a) First, navigate to EC2 within the AWS website by clicking on services, then EC2.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image053.png "Optional title")
+
 b) Under the Create Instance section, click launch instance.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image054.png "Optional title")
 
 c) Select Amazon Linux AMI
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image055.png "Optional title")
+
 d) Click next with default values until step 6: configure security group. Click Add rule and
 select the type ‘HTTP’ like so. This is so that port 80 is open for our web interface.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image056.png "Optional title")
 
 e) Click review and launch, then click launch, choose create a new key pair and enter a key
 pair name. Finally, click download key pair. This key pair is used so that we will be able to
 SSH into the instance we created to host the web interface.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image057.png "Optional title")
+
 f) After downloading, click launch instance, and the instance should take awhile to load up.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image058.png "Optional title")
 
 g) Once the instance state and status checks are running and 2/2 checks respectively, you are
 ready to connect to the EC2 instance that you’ve just created.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image059.png "Optional title")
 
 #### Connecting to EC2 Instance
 
@@ -395,41 +489,66 @@ a) Head over to the following two websites to download and install WinSCP and Pu
 https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 https://winscp.net/eng/download.php
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image060.png "Optional title")
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image061.png "Optional title")
+
 b) Once you have installed both softwares, open PuTTYgen.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image062.png "Optional title")
 
 c) Choose RSA, click load and browse to the .pem file that you download previously (the key
 pair). Click ok on the “successfully imported” dialog box.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image063.png "Optional title")
+
 d) Choose save private key and click yes on the warning. A .ppk file is now saved. You are
 now ready to SSH into the instance that you’ve created.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image064.png "Optional title")
+
 e) In the EC2 management console, take note of the Public DNS value. In this case, it is ec2-
 52 - 37 - 2 - 61.us-west-2.compute.amazonaws.com.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image065.png "Optional title")
 
 f) The default user name of the instance we had created is ec2-user. Within PuTTY, enter the
 host name, ec2-user@ec2- 52 - 37 - 2 - 61.us-west-2.compute.amazonaws.com.
 (<user_name>@<public DNS>)
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image066.png "Optional title")
+
 g) Next, navigate to connection, SSH then auth. Under private key file for authentication,
 browse to the .ppk file you created previously.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image067.png "Optional title")
 
 h) Click Open, then click yes on the PuTTY security alert. You should now be SSH in to the EC2
 instance that you’ve created.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image068.png "Optional title")
+
 i) Now open WinSCP. Enter the public DNS value under host name and ec2-user under host
 name like so.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image069.png "Optional title")
 
 j) Click advanced. navigate to authentication under SSH. Under private key file, browse to
 the .ppk file that you created previously.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image070.png "Optional title")
+
 k) Click OK, save as a site and login. Click YES when the warning dialog pops up. You are now
 connected to the instance.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image071.png "Optional title")
 
 l) Create a new directory in the instance, named SmartPark. Navigate into it and move the
 necessary web application files (Refer to section 8 and the zip files for the code) and the
 rootca.pem, public.pem.key, private.pem.key and certifcate.pem.crt downloaded
 previously into it.
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image072.png "Optional title")
 
 #### Running the Web Application
 
@@ -442,6 +561,8 @@ sudo yum install tmux
 
 ```
 Type ‘y’ when asked to.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image073.png "Optional title")
 
 b) Install the required libraries for the python files.
 
@@ -466,10 +587,13 @@ sudo python server.py &
 sudo python getData.py &
 tmux detach
 ```
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image074.png "Optional title")
 
 e) Close the PuTTY connection. Return to EC2 management console and take note of the IPV4
 public IP address. Open that IP address in the browser.
 The web application should be up and running.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image075.png "Optional title")
 
 ## Section 7 Reading RFID/NFC tags setup
 
@@ -486,6 +610,10 @@ a) Run raspi-config, choose menu item “5 Interfacing Options” and enable SPI
 ```
 sudo rasp-config
 ```
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image076.png "Optional title")
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image077.png "Optional title")
+
 ##### << Enable device tree in boot.txt>>
 
 a) Modify the /boot/config.txt to enable SPI
@@ -531,6 +659,7 @@ sudo nano ~/SmartPark/MFRC522.py
 ```
 g) Scroll down to the function “__init__” and make the following changes:
 
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image078.png "Optional title")
 
 ## Section 8 Program setup
 
@@ -616,6 +745,8 @@ displayed in the web interface in table format.
 ## Section 9 Web interface setup
 
 The following files are required for the web interface to work.
+
+![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image079.png "Optional title")
 
 Due to how many files there are and how long it will be, it will not be written in this tutorial but
 they are located in the ZIP folder provided.
