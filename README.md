@@ -221,17 +221,22 @@ you previously created. Attach the thing you created previously.
 
 #### Create AWS Role
 
-a) Run the following command on your Raspberry Pi to install the AWS Command-line
+a) Run the following command on your Raspberry Pi to install the AWS Command-line client on your Raspberry Pi
 
 ```
-client on your Raspberry Pi
 sudo pip install awscli --upgrade --user
 ```
 b) Edit the .profile to include the path of the AWS client
+
+```
 sudo nano ~/.profile
+```
 
 c) Add in the following code after the last line and save the file
+
+```
 export PATH=~/.local/bin:$PATH
+```
 
 d) Type the following command at the command-line prompt to make the new settings take effect immediately
 
@@ -241,7 +246,7 @@ source ~/.profile
 e) Create a file named iot-role-trust.json in the same folder as the four certifcate and key
 files with the following contents:
 ```
-f) {^
+{^
 "Version":"2012- 10 - 17",
 "Statement":[{
 "Effect": "Allow",
@@ -252,10 +257,10 @@ f) {^
 }]
 }
 ```
-g) Create a file named iot-policy.json in the same folder as the four certifcate and key files
+f) Create a file named iot-policy.json in the same folder as the four certifcate and key files
 with the following contents:
 ```
-h) {^
+{^
 "Version": "2012- 10 - 17",
 "Statement": [
 {
@@ -279,34 +284,33 @@ h) {^
 ]
 }
 ```
-i) Type the following command to install the AWS Command-Line Interface Client on your
+g) Type the following command to install the AWS Command-Line Interface Client on your Raspberry Pi
 
 ```
-Raspberry Pi
 sudo pip install awscli
 ```
-j) Take note of your AWS educate’s Access Key ID and Secret Access Key ID.
+h) Take note of your AWS educate’s Access Key ID and Secret Access Key ID.
 
 ![Alt text](https://github.com/Revanus/DISMIoTSmartParkV2Assignment/blob/master/README%20images/image037.png "Optional title")
 
-k) Type the following command in your Raspberry Pi terminal so that you can use the AWS CLI to configure your credentials file:
+i) Type the following command in your Raspberry Pi terminal so that you can use the AWS CLI to configure your credentials file:
 ```
 aws configure
 ```
-l) Enter the Access Key ID and Secret Access Key id you obtained previously.
+j) Enter the Access Key ID and Secret Access Key id you obtained previously.
 ```
 AWS Access key ID: <Enter Access Key>
 AWS Secret Access Key: <Enter Secret Access Key>
 Default Region name: us-west- 2
 Default output format: <Default value>
 ```
-m) Run this command while in the same folder as iot-role-trust.json file.
+k) Run this command while in the same folder as iot-role-trust.json file.
 ```
 aws iam create-role --role-name my-iot-role --assume-role-
 policy-document file://iot-role-trust.json
 ```
 
-n) Run this command while in the same folder as iot-policy.json file.
+l) Run this command while in the same folder as iot-policy.json file.
 ```
 aws iam put-role-policy --role-name my-iot-role --policy-
 name iot-policy --policy-document file://iot-policy.json
